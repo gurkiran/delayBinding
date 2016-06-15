@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app='app'>
+  <head>
+    <title>AngularJS </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <!-- load angular via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  </head>
+  <body>
+     <div ng-controller='mainCtrl'>
+       <ul >
+           <li ng-repeat='cust in customers' delay-bind='{{::cust.name}}' attribute='title' trigger='mouseenter'>
+           <a delay-bind='{{::cust.url}}' attribute='href' trigger='mouseenter'>
+               {{cust.name}}
+           </a>
+           </li>
+       </ul>
+       <div> Total Customers: {{::customers.length}}</div>
+      </div>
+
+   <script src='app.js'></script>
+  </body>
+</html>
